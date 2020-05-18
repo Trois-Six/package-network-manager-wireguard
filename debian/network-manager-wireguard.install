@@ -1,0 +1,5 @@
+usr/lib/NetworkManager/VPN/nm-wireguard-service.name
+usr/lib/NetworkManager/nm-wireguard-service
+usr/lib/*/NetworkManager/libnm-vpn-plugin-wireguard.so
+usr/share/locale/
+etc/dbus-1/system.d/nm-wireguard-service.conf

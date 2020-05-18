@@ -1,0 +1,3 @@
+usr/lib/*/NetworkManager/libnm-vpn-plugin-wireguard-editor.so
+usr/lib/NetworkManager/nm-wireguard-auth-dialog
+usr/share/metainfo/network-manager-wireguard.metainfo.xml

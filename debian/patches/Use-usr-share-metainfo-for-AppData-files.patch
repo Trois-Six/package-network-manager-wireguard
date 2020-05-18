@@ -1,0 +1,24 @@
+From: Michael Biebl <biebl@debian.org>
+Date: Tue, 5 May 2020 13:55:50 +0200
+Subject: Use /usr/share/metainfo for AppData files
+
+See https://wiki.debian.org/AppStream/Guidelines
+
+Fixes: #13
+---
+ Makefile.am | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/Makefile.am b/Makefile.am
+index ebf250e..35f9ffa 100644
+--- a/Makefile.am	2020-05-15 12:08:25.648564284 +0000
++++ b/Makefile.am	2020-05-15 12:09:01.448402080 +0000
+@@ -266,7 +266,7 @@
+ 	 rm -f $(DESTDIR)$(sysconfdir)/NetworkManager/VPN/nm-wireguard-service.name
+ endif
+ 
+-appdatadir = $(datadir)/appdata
++appdatadir = $(datadir)/metainfo
+ appdata_files = $(appdata_in_files:.xml.in=.xml)
+ if WITH_GNOME
+ appdata_DATA = $(appdata_files)

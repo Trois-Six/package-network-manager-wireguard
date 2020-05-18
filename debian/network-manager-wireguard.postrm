@@ -1,0 +1,12 @@
+#!/bin/sh
+
+set -e
+
+if [ "$1" = purge ]; then
+    if [ -x "$(command -v deluser)" ]; then
+        deluser --quiet --system nm-wireguard > /dev/null || true
+    fi
+    rm -rf /var/lib/wireguard/chroot
+fi
+
+#DEBHELPER#

@@ -1,0 +1,16 @@
+#!/bin/sh
+
+set -e
+
+if [ "$1" = configure ]; then
+    # create system user required to run the wireguard daemon unprivileged
+    adduser --quiet --system \
+            --home /var/lib/wireguard/chroot \
+            --gecos "NetworkManager WireGuard" \
+            --group nm-wireguard
+
+    # create directory used for running the wireguard daemon in a chroot
+    install -o nm-wireguard -g nm-wireguard -d /var/lib/wireguard/chroot/tmp
+fi
+
+#DEBHELPER#

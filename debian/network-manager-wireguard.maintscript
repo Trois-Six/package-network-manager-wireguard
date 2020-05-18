@@ -1,0 +1,2 @@
+rm_conffile /etc/NetworkManager/VPN/nm-wireguard-service.name 1.2.8-3~
+rm_conffile /etc/dbus-1/system.d/nm-wireguard-service.conf 1.8.8-2~
